@@ -45,7 +45,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ACM.BL.OrderItem" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EIAAAIAAAACAAAAAAABAAAAAAAQAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>OrderItem.cs</FileName>
