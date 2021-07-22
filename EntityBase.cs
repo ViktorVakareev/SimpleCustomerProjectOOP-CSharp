@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ACM.BL
+{
+    public abstract class EntityBase
+    {
+        public enum EntityStateOption
+        { 
+        Active,
+        Deleted
+        }
+        public EntityStateOption entityState { get; set; }   //enum value
+        public bool HasChanges { get; set; }
+        public bool IsNew { get; private set; }
+        public  bool isValid => Validate();    //read-only prop
+
+        public abstract bool Validate();
+        
+    }    
+}

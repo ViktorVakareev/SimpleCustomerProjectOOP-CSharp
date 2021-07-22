@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product: EntityBase
     {
         public Product()
         {
@@ -17,7 +17,11 @@ namespace ACM.BL
         public string ProductName { get; set; }
         public double? CurrentPrice { get; set; }   // Nullable type - like double->Double in Java
 
-        public bool Validate()
+        public override string ToString()
+        {
+            return ProductName;
+        }
+        public override bool Validate()
         {
             bool isValid = true;
             if ((CurrentPrice == null) || (ProductId <= 0))

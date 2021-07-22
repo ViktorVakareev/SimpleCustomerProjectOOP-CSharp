@@ -25,8 +25,27 @@ namespace ACM.BL
         }
         public bool Save(Order order)
         {
-            //TODO save the passed in product
-            return true;
+            bool success = true;
+            if (order.HasChanges)
+            {
+                if (order.isValid)
+                {
+                    if (order.IsNew)
+                    {
+                        //call an Insert Stored procedure
+                    }
+                    else
+                    {
+                        //call an Update Stored procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
+            
         }
     }
 }

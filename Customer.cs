@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         // Constructors
         public Customer()
@@ -18,6 +18,7 @@ namespace ACM.BL
 
         // fields and properties
 
+        public int CustomerType { get; set; }
         public List<Address> AddressList { get; set; }  // We need to initialize the List, so it doesn't throw null
         public int CustomerId { get; private set; }     
         public string Email { get; set; }
@@ -34,8 +35,8 @@ namespace ACM.BL
         public static int InstanceCount { get; set; }
 
         // Methods
-
-        public bool Validate()
+        public override string ToString() => FullName; // short for return FullName
+        public override bool Validate()
         {
             bool isValid = true;
             if (String.IsNullOrEmpty(LastName) ||
@@ -45,8 +46,6 @@ namespace ACM.BL
             }
             return isValid;
         }
-
-        
         private string CheckForMissingFirstOrLastNames(string lastName)
         {
             string fullName = lastName;

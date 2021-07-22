@@ -31,8 +31,26 @@ namespace ACM.BL
         }
         public bool Save(Customer customer)
         {
-            //TODO save the passed in customer
-            return true;
+            bool success = true;
+            if (customer.HasChanges)
+            {
+                if (customer.isValid)
+                {
+                    if (customer.IsNew)
+                    {
+                        //call an Insert Stored procedure
+                    }
+                    else
+                    {
+                        //call an Update Stored procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }

@@ -62,8 +62,26 @@ namespace ACM.BL
         }
         public bool Save(Address address)
         {
-            //TODO save the passed in customer
-            return true;
+            bool success = true;
+            if (address.HasChanges)
+            {
+                if (address.isValid)
+                {
+                    if (address.IsNew)
+                    {
+                        //call an Insert Stored procedure
+                    }
+                    else
+                    {
+                        //call an Update Stored procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
