@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CommonFunctionalityLibrary;
 
 namespace ACM.BL
 {
-    public class Product: EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -14,9 +15,20 @@ namespace ACM.BL
         }
         public int ProductId { get; set; }
         public string ProductDescription { get; set; }
-        public string ProductName { get; set; }
-        public double? CurrentPrice { get; set; }   // Nullable type - like double->Double in Java
 
+        private string _productName;
+        public string ProductName {
+            get {
+                //var stringHandler = new StringHandler();  // StringHandler class made static
+
+                return _productName.InsertSpacesInProductNames(); 
+            }
+            set { _productName = value; }
+        }
+        public double? CurrentPrice { get; set; }   // Nullable type - like double->Double in Java
+        // Implementation of Illogable interface
+        public string Log() =>
+            $"{ProductId}: {ProductName} Details: {ProductDescription} Status: {entityState.ToString()}";
         public override string ToString()
         {
             return ProductName;
@@ -30,6 +42,6 @@ namespace ACM.BL
             }
             return isValid;
         }
-       
+
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CommonFunctionalityLibrary;
 
 namespace ACM.BL
 {
-    public class Customer : EntityBase
+    public class Customer : EntityBase, ILoggable
     {
         // Constructors
         public Customer()
@@ -35,6 +36,9 @@ namespace ACM.BL
         public static int InstanceCount { get; set; }
 
         // Methods
+        // Implementation of Illogable interface
+        public string Log() => 
+            $"{CustomerId}: {FullName} Email: {Email} Status: {entityState.ToString()}";
         public override string ToString() => FullName; // short for return FullName
         public override bool Validate()
         {

@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BL", "ACM.BL.csproj", "{73B77373-3E34-4A98-BECE-8998670D3603}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACM.BL", "ACM.BL.csproj", "{73B77373-3E34-4A98-BECE-8998670D3603}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5CE78FDE-6DB1-408B-A7EB-5CE848BB9A3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BL-Test", "..\ACM.BL-Test\ACM.BL-Test.csproj", "{51332E24-29BE-44A3-A7CD-455B9032DC35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACM.BL-Test", "..\ACM.BL-Test\ACM.BL-Test.csproj", "{51332E24-29BE-44A3-A7CD-455B9032DC35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonFunctionalityLibrary", "..\CommonFunctionalityLibrary\CommonFunctionalityLibrary.csproj", "{63E7BEEB-D102-4751-8D23-BCA6BA46E652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonFunctionalityLibrary-Tests", "..\CommonFunctionalityLibrary-Tests\CommonFunctionalityLibrary-Tests.csproj", "{4439D1C7-FEEC-408D-927E-289FE456746C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +27,21 @@ Global
 		{51332E24-29BE-44A3-A7CD-455B9032DC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51332E24-29BE-44A3-A7CD-455B9032DC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51332E24-29BE-44A3-A7CD-455B9032DC35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63E7BEEB-D102-4751-8D23-BCA6BA46E652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E7BEEB-D102-4751-8D23-BCA6BA46E652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E7BEEB-D102-4751-8D23-BCA6BA46E652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E7BEEB-D102-4751-8D23-BCA6BA46E652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4439D1C7-FEEC-408D-927E-289FE456746C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4439D1C7-FEEC-408D-927E-289FE456746C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4439D1C7-FEEC-408D-927E-289FE456746C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4439D1C7-FEEC-408D-927E-289FE456746C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{51332E24-29BE-44A3-A7CD-455B9032DC35} = {5CE78FDE-6DB1-408B-A7EB-5CE848BB9A3A}
+		{4439D1C7-FEEC-408D-927E-289FE456746C} = {5CE78FDE-6DB1-408B-A7EB-5CE848BB9A3A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {025ED919-8C35-4DC2-A1DD-4398BEC3EE81}
